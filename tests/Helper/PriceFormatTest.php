@@ -28,4 +28,14 @@ class PriceFormatTest extends TestCase
     {
         $this->assertSame(1000, PriceFormat::stringToCents('10.00'));
     }
+    
+    public function testCentsToFloat(): void
+    {
+        $this->assertSame(10.00, PriceFormat::centsToFloat(1000));
+    }
+    
+    public function testCentsToString(): void
+    {
+        $this->assertSame('10.00', PriceFormat::centsToString(1000));
+    }
 }

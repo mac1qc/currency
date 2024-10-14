@@ -25,4 +25,14 @@ class PriceFormat
     {
         return self::floatToCents(self::stringToFloat($value));
     }
+
+    public static function centsToFloat(int $value): float
+    {
+        return (float)($value / 100);
+    }
+
+    public static function centsToString(int $value): string
+    {
+        return self::floatToString((float)($value / 100));
+    }
 }
