@@ -72,16 +72,6 @@ class Currency
         ];
     }
 
-    public function getAmericas(): array
-    {
-        return array_merge(
-            $this->getAntilles(),
-            $this->getCentralAmerica(),
-            $this->getNorthAmerica(),
-            $this->getSouthAmerica(),
-        );
-    }
-
     public function getEastEurope(): array
     {
         return [
@@ -131,6 +121,100 @@ class Currency
             CurrencyList::SWISS_FRANC->value,
             CurrencyList::POUND_STERLING->value,
         ];
+    }
+
+    public function getCentralAfrica(): array
+    {
+        return [
+            CurrencyList::BURUNDIAN_FRANC->value,
+            CurrencyList::CFA_FRANC_BEAC->value,
+            CurrencyList::CONGOLESE_FRANC->value,
+            CurrencyList::SAO_TOME_AND_PRINCIPE_DOBRA->value,
+        ];
+    }
+
+    public function getEasternAfrica(): array
+    {
+        return [
+            CurrencyList::COMORO_FRANC->value,
+            CurrencyList::DJIBOUTIAN_FRANC->value,
+            CurrencyList::ERITREAN_NAKFA->value,
+            CurrencyList::ETHIOPIAN_BIRR->value,
+            CurrencyList::KENYAN_SHILLING->value,
+            CurrencyList::MALAGASY_ARIARY->value,
+            CurrencyList::MAURITIAN_RUPEE->value,
+            CurrencyList::RWANDAN_FRANC->value,
+            CurrencyList::SEYCHELLES_RUPEE->value,
+            CurrencyList::SOMALIAN_SHILLING->value,
+            CurrencyList::SOUTH_SUDANESE_POUND->value,
+            CurrencyList::SUDANESE_POUND->value,
+            CurrencyList::TANZANIAN_SHILLING->value,
+            CurrencyList::UGANDAN_SHILLING->value,
+        ];
+    }
+
+    public function getNorthernAfrica(): array
+    {
+        return [
+            CurrencyList::ALGERIAN_DINAR->value,
+            CurrencyList::EGYPTIAN_POUND->value,
+            CurrencyList::LIBYAN_DINAR->value,
+            CurrencyList::MAURITANIAN_OUGUIYA->value,
+            CurrencyList::MOROCCAN_DIRHAM->value,
+            CurrencyList::TUNISIAN_DINAR->value,
+        ];
+    }
+
+    public function getSouthernAfrica(): array
+    {
+        return [
+            CurrencyList::ANGOLAN_KWANZA->value,
+            CurrencyList::BOTSWANA_PULA->value,
+            CurrencyList::SWAZI_LILANGENI->value,
+            CurrencyList::LESOTHO_LOTI->value,
+            CurrencyList::MALAWIAN_KWACHA->value,
+            CurrencyList::MOZAMBICAN_METICAL->value,
+            CurrencyList::NAMIBIAN_DOLLAR->value,
+            CurrencyList::SOUTH_AFRICAN_RAND->value,
+            CurrencyList::ZAMBIAN_KWACHA->value,
+            CurrencyList::ZIMBABWE_GOLD->value,
+            CurrencyList::UNITED_STATES_DOLLAR->value,
+        ];
+    }
+
+    public function getWesternAfrica(): array
+    {
+        return [
+            CurrencyList::CFA_FRANC_BCEAO->value,
+            CurrencyList::CAPE_VERDEAN_ESCUDO->value,
+            CurrencyList::GAMBIAN_DALASI->value,
+            CurrencyList::GHANAIAN_CEDI->value,
+            CurrencyList::GUINEAN_FRANC->value,
+            CurrencyList::LIBERIAN_DOLLAR->value,
+            CurrencyList::NIGERIAN_NAIRA->value,
+            CurrencyList::SIERRA_LEONEAN_LEONE->value,
+        ];
+    }
+
+    public function getAfrica(): array
+    {
+        return array_merge(
+            $this->getCentralAfrica(),
+            $this->getEasternAfrica(),
+            $this->getNorthernAfrica(),
+            $this->getSouthernAfrica(),
+            $this->getWesternAfrica(),
+        );
+    }
+
+    public function getAmerica(): array
+    {
+        return array_merge(
+            $this->getAntilles(),
+            $this->getCentralAmerica(),
+            $this->getNorthAmerica(),
+            $this->getSouthAmerica(),
+        );
     }
 
     public function getEurope(): array
