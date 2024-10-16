@@ -196,6 +196,95 @@ class Currency
         ];
     }
 
+    public function getCentralAsia(): array
+    {
+        return [
+            CurrencyList::KAZAKHSTANI_TENGE->value,
+            CurrencyList::KYRGYZSTANI_SOM->value,
+            CurrencyList::TAJIKISTANI_SOMONI->value,
+            CurrencyList::TURKMENISTAN_MANAT->value,
+            CurrencyList::UZBEKISTANI_SUM->value,
+        ];
+    }
+
+    public function getEastAsia(): array
+    {
+        return [
+            CurrencyList::RENMINBI->value,
+            CurrencyList::HONG_KONG_DOLLAR->value,
+            CurrencyList::MACANESE_PATACA->value,
+            CurrencyList::JAPANESE_YEN->value,
+            CurrencyList::MONGOLIAN_TOGROG->value,
+            CurrencyList::NORTH_KOREAN_WON->value,
+            CurrencyList::SOUTH_KOREAN_WON->value,
+            CurrencyList::NEW_TAIWAN_DOLLAR->value,
+        ];
+    }
+
+    public function getNorthAsia(): array
+    {
+        return [
+            CurrencyList::RUSSIAN_RUBLE->value,
+        ];
+    }
+
+    public function getSouthAsia(): array
+    {
+        return [
+            CurrencyList::AFGHAN_AFGHANI->value,
+            CurrencyList::BANGLADESHI_TAKA->value,
+            CurrencyList::BHUTANESE_NGULTRUM->value,
+            CurrencyList::INDIAN_RUPEE->value,
+            CurrencyList::MALDIVIAN_RUFIYAA->value,
+            CurrencyList::NEPALESE_RUPEE->value,
+            CurrencyList::PAKISTANI_RUPEE->value,
+            CurrencyList::SRI_LANKAN_RUPEE->value,
+        ];
+    }
+
+    public function getSoutheastAsia(): array
+    {
+        return [
+            CurrencyList::BRUNEI_DOLLAR->value,
+            CurrencyList::CAMBODIAN_RIEL->value,
+            CurrencyList::UNITED_STATES_DOLLAR->value,
+            CurrencyList::INDONESIAN_RUPIAH->value,
+            CurrencyList::LAO_KIP->value,
+            CurrencyList::MALAYSIAN_RINGGIT->value,
+            CurrencyList::MYANMAR_KYAT->value,
+            CurrencyList::PHILIPPINE_PESO->value,
+            CurrencyList::SINGAPORE_DOLLAR->value,
+            CurrencyList::THAI_BAHT->value,
+            CurrencyList::VIETNAMESE_DONG->value,
+        ];
+    }
+
+    public function getWestAsia(): array
+    {
+        return [
+            CurrencyList::TURKISH_LIRA->value,
+            CurrencyList::BAHRAINI_DINAR->value,
+            CurrencyList::KUWAITI_DINAR->value,
+            CurrencyList::OMANI_RIAL->value,
+            CurrencyList::QATARI_RIYAL->value,
+            CurrencyList::SAUDI_RIYAL->value,
+            CurrencyList::UNITED_ARAB_EMIRATES_DIRHAM->value,
+            CurrencyList::YEMENI_RIAL->value,
+            CurrencyList::GEORGIAN_LARI->value,
+            CurrencyList::ARMENIAN_DRAM->value,
+            CurrencyList::AZERBAIJANI_MANAT->value,
+            CurrencyList::IRAQI_DINAR->value,
+            CurrencyList::ISRAELI_NEW_SHEKEL->value,
+            CurrencyList::JORDANIAN_DINAR->value,
+            CurrencyList::LEBANESE_POUND->value,
+            CurrencyList::EGYPTIAN_POUND->value,
+            CurrencyList::JORDANIAN_DINAR->value,
+            CurrencyList::SYRIAN_POUND->value,
+            CurrencyList::IRANIAN_RIAL->value,
+            CurrencyList::EURO->value,
+        ];
+    }
+
     public function getAfrica(): array
     {
         return array_merge(
@@ -214,6 +303,18 @@ class Currency
             $this->getCentralAmerica(),
             $this->getNorthAmerica(),
             $this->getSouthAmerica(),
+        );
+    }
+
+    public function getAsia(): array
+    {
+        return array_merge(
+            $this->getCentralAsia(),
+            $this->getEastAsia(),
+            $this->getNorthAsia(),
+            $this->getSouthAsia(),
+            $this->getSoutheastAsia(),
+            $this->getWestAsia(),
         );
     }
 
