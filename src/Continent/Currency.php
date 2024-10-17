@@ -285,6 +285,49 @@ class Currency
         ];
     }
 
+    public function getAustralasia(): array
+    {
+        return [
+            CurrencyList::AUSTRALIAN_DOLLAR->value,
+            CurrencyList::NEW_ZEALAND_DOLLAR->value,
+            CurrencyList::PAPUA_NEW_GUINEAN_KINA->value,
+        ];
+    }
+
+    public function getMelanesia(): array
+    {
+        return [
+            CurrencyList::FIJI_DOLLAR->value,
+            CurrencyList::PAPUA_NEW_GUINEAN_KINA->value,
+            CurrencyList::SOLOMON_ISLANDS_DOLLAR->value,
+            CurrencyList::VANUATU_VATU->value,
+            CurrencyList::INDONESIAN_RUPIAH->value,
+            CurrencyList::CFP_FRANC->value,
+        ];
+    }
+
+    public function getMicronesia(): array 
+    {
+        return [
+            CurrencyList::UNITED_STATES_DOLLAR->value,
+            CurrencyList::AUSTRALIAN_DOLLAR->value,
+        ];
+    }
+
+    public function getPolynesia(): array
+    {
+        return [
+            CurrencyList::UNITED_STATES_DOLLAR->value,
+            CurrencyList::NEW_ZEALAND_DOLLAR->value,
+            CurrencyList::CHILEAN_PESO->value,
+            CurrencyList::CFP_FRANC->value,
+            CurrencyList::AUSTRALIAN_DOLLAR->value,
+            CurrencyList::FIJI_DOLLAR->value,
+            CurrencyList::SAMOAN_TALA->value,
+            CurrencyList::TONGAN_PA_ANGA->value,
+        ];
+    }
+
     public function getAfrica(): array
     {
         return array_merge(
@@ -325,6 +368,27 @@ class Currency
             $this->getWestEurope(),
             $this->getNorthernEurope(),
             $this->getSouthernEurope(),
+        );
+    }
+
+    public function getOceania(): array
+    {
+        return array_merge(
+            $this->getAustralasia(),
+            $this->getMelanesia(),
+            $this->getMicronesia(),
+            $this->getPolynesia(),
+        );
+    }
+
+    public function getWorld(): array
+    {
+        return array_merge(
+            $this->getAfrica(),
+            $this->getAmerica(),
+            $this->getAsia(),
+            $this->getEurope(),
+            $this->getOceania(),
         );
     }
 }
