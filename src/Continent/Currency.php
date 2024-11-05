@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MartinAC\Currency\Continent;
 
-use MartinAC\Currency\Enum\Currency AS currencyList;
+use MartinAC\Currency\Enum\Currency AS CurrencyList;
 
 class Currency
 {
